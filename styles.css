@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unlock&display=swap');
+
+:root {
+    --ashen-black: #1a1a1a; /* Oscuridad profunda, cenizas */
+    --ember-black: #121212; /* Carbón apagado */
+    --abyss-black: #0f0f0f; /* Más oscuro aún */
+    --ghostly-white: #ffffff; /* Blanco pálido*/
+    --ashen-gray: #c7c7c7; /* Cenizas y restos */
+    --charcoal-gray: #222; /* Carbón oscuro */
+    --smoldering-gray: #333; /* Carbón*/
+    --iron-gray: #444; /* Metal*/
+    --steel-gray-hover: #666; /* Brillo metálico tenue */
+  
+    --blood-red: #8a0303; /* Sangre */
+    --flame-orange: #ff4500; /* Fuego intenso */
+    --ember-glow: #ff6b00; /* Carbón incandescente */
+    --pyromancy-red: #b22222; /* pirotecnia */
+    --sunset-orange: #ff8c00; /* hoguera */
+    --crimson-red: #dc143c; /* Rojo sangre */
+    --lava-orange: #d35400; /* Lava*/
+  
+  
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--ashen-black);
+    color: var(--ashen-gray);
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+    margin: 0; 
+}
+.principal_title{
+    font-family:'Unlock', sans ;
+}
+
+.header {
+    background-color: var(--charcoal-gray);
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    width: 100%; 
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-right: 5%;
+    justify-content:space-between;
+    padding: 0 1rem; 
+}
+
+
+.menu--icon{
+    display: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--ghostly-white);
+    border: 2px solid transparent; 
+    position: relative; 
+    padding: 4px;
+    transition: transform 0.3s ease, border-color 0.5s ease; 
+}
+
+.nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--flame-orange);
+    border-radius: 4px; 
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.nav a:hover {
+    transform: scale(1.2);
+}
+
+.nav a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Exhibition */
+
+.exhibition--1{
+    background-image: url("images/fondo1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.exhibition--2{
+    background-image: url("images/fondo2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.exhibiciones-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exhibition--text{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.644);
+    border-radius: 15px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.exhibition {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 60vh;
+    padding: 2rem;
+    color: var(--ghostly-white);
+}
+
+#prev-btn, #next-btn {
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+#prev-btn {
+    left: 1rem;
+}
+
+#next-btn {
+    right: 1rem;
+}
+
+/* Galeria */
+
+.photo1{
+    background-image: url("images/davinvi.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.photo2{
+    background-image: url("images/ultima.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.photo3{
+    background-image: url("images/adan.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.photo4{
+    background-image: url("images/gioconda.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.galeria-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.galeria-container--elements {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; 
+    width: 100%;
+}
+
+.galeria-photos_horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 3rem; 
+    width: 100%;
+}
+
+.galeria-photos_vertical {
+    position: relative;
+    flex: 1;
+    max-width: 400px; 
+    height: 500px; 
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--charcoal-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.galeria-photos_vertical:hover {
+    transform: scale(1.05);
+    background-color: var(--blood-red);
+}
+
+.galeria-photos_vertical h2, .galeria-photos_vertical h3 {
+    color: var(--ghostly-white);
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0); 
+    border-radius: 5px;
+    text-align: center; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.galeria-photos_vertical:hover h2, .galeria-photos_vertical:hover h3 {
+    opacity: 1; 
+}
+
+.galeria-photos_vertical h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.galeria-photos_vertical h3 {
+    font-size: 1.2rem;
+}
+
+
+
+
+footer {
+    margin-top: 5rem; 
+}
+

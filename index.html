@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="principal_title">Galeria de arte</h1>
+            <div class="nav">
+                <a href="#">Exhibiciones</a> 
+                <a href="#">Galeria</a>
+                <a href="#">Eventos</a>
+                <a href="#">Visitanos</a>
+            </div>
+            <box-icon class="menu--icon" name='menu' color='#ffffff' ></box-icon>
+        </div>
+    </header>
+    <br>
+    <main>
+        <section class="exhibiciones-container">
+            <box-icon name='chevron-left' color='#ffffff' id="prev-btn"></box-icon>
+            <div class="carousel">
+                <div class="exhibition exhibition--1">
+                    <div class="exhibition--text">
+                        <h1>Noche de Arte Veneciana</h1>
+                        <h3>15 de noviembre, 2024</h3>
+                        <h2>Únete a nosotros para una noche de exposiciones y eventos especiales, incluyendo una subasta benéfica y una charla de un experto en arte veneciano.</h2>
+                    </div>
+                    
+                </div>
+                <div class="exhibition exhibition--2">
+                    <div class="exhibition--text">
+                        <h1>Taller de Pintura Renacentista</h1>
+                        <h3>22 de diciembre, 2024</h3>
+                        <h2>Participa en un taller interactivo y aprende las técnicas de los maestros del Renacimiento. Ideal para artistas aficionados y entusiastas del arte.</h2>
+                    </div>
+                </div>
+            </div>
+            <box-icon name='chevron-right' color='#ffffff' id="next-btn"></box-icon>
+        </section>
+        <br>
+        <section class="galeria-container">
+            <div class="galeria-container--elements">
+                <h1 class="galeria--title">GALERIA</h1>
+                <div class="galeria-photos_horizontal">
+                    <div class="galeria-photos_vertical photo1">
+                        <h2>Hombre de Vitruvio</h2>
+                        <h3>es un famoso dibujo acompañado de notas anatómicas de Leonardo da Vinci realizado alrededor de 1490 en uno de sus diarios.</h3>
+                    </div>
+                    <div class="galeria-photos_vertical photo2">
+                        <h2>La última cena</h2>
+                        <h3>una pintura mural original de Leonardo da Vinci ejecutada entre 1495 y 1498.​​ Se encuentra en la pared sobre la que se pintó originalmente, en el refectorio del convento dominico de Santa Maria delle Grazie, en Milán, ​ declarado Patrimonio de la Humanidad por la Unesco en 1980.​</h3>
+                    </div>
+                </div>
+                <div class="galeria-photos_horizontal">
+                    <div class="galeria-photos_vertical photo3">
+                        <h2>La creación de Adán</h2>
+                        <h3>pintado por Miguel Ángel alrededor del año 1511. Ilustra uno de los nueve episodios del Génesis representados allí por el artista toscano, ​ en el cual Dios le da vida a Adán, el primer hombre.</h3>
+                    </div>
+                    <div class="galeria-photos_vertical photo4">
+                        <h2>La Gioconda</h2>
+                        <h3>El retrato de Lisa Gherardini, esposa de Francesco del Giocondo, ​ más conocido como La Gioconda o Monna Lisa, es una obra pictórica del polímata renacentista italiano Leonardo da Vinci.</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="eventos-container"></section>
+    </main>
+    <footer></footer>
+</body>
+</html>
